@@ -201,7 +201,7 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
          @IBAction func createPollTapped(_ sender: Any) {
          //TODO: transition to new Poll Screen 
          }
-      ```
+     ```
     * (Delete) Delete existing or past polls.
     * (Read/GET) Display feed of past polls and results.
 * Start A Poll Screen
