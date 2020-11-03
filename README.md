@@ -133,7 +133,16 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+#### Poll
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | author        | Pointer to User| image author |
+   | image         | File     | image that user posts |
+   | likesCount    | Number   | number of votes for the post |
+   | createdAt     | DateTime | date when post is created (default field) |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
