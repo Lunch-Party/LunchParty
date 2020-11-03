@@ -175,6 +175,7 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
     * (Read/GET) Display poll information like time remaining, number voted, options.
     * (Read/GET) Display messages/updates in between options and votes.
     * (Create/POST) User creates a vote on a restaurant option.
+    * (Update/PUT) User adds a restaurant option to poll object.
     * (Delete) User removes vote from restaurant option.
 * Results Screen 
     * (Read/GET) Display poll data with number of votes per restaurant option.
