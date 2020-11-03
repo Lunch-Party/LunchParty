@@ -158,15 +158,17 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
 
 ### Networking
 * Launch Login Screen
-   * Login Button
-   * Register Button
+   * (Read/GET) Query logged in user object.
+   * (Create/POST) Create user object.
 * Home Feed Screen
    * (Read/GET) Search for users in app.
    * (Read/GET) Display users posts by most recent.
+   * (Create/POST) Create a post object.
+   * (Delete) Delete a post object.
 * Following Feed Screen
     * (Read/GET) Query all posts from users user follows.
 * Vote Menu Screen
-    * (Create/POST) Create a poll.
+    * (Create/POST) Create a poll object.
     * (Delete) Delete existing or past polls.
     * (Read/GET) Display feed of past polls and results.
 * Start A Poll Screen
@@ -181,6 +183,7 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
     * (Read/GET) Display images of restaurants from search results. 
     * (Read/GET) User can filter search results and change search result display.
 * User Profile Screen
+    * (Read/GET) Query logged in user object.
     * (Update/PUT) Change user's profile image.
     * (Update/PUT) Change user's name.
 
