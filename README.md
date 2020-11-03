@@ -137,7 +137,7 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | option     | String   | name of one restaurant option |
+   | option        | String   | name of one restaurant option |
    | author        | Pointer to User| image author |
    | image         | File     | image that user posts |
    | likesCount    | Number   | number of votes for the restaurant option |
@@ -159,6 +159,21 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
 ### Networking
 * Launch Login Screen
    * (Read/GET) Query logged in user object.
+        ```swift
+        let email = email_login.text!
+        let password = pass_login.text!
+        // Signing in the user
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                let alert = UIAlertController(title: "Failed Login", message: "Email or password is incorrect.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                self.present(alert, animated: true)
+                self.email_login.text?.removeAll()
+                self.pass_login.text?.removeAll()
+            }
+            else {
+                //TODO: transition to home / main screen if successfully logged in
+            }```
    * (Create/POST) Create user object.
 * Home Feed Screen
    * (Read/GET) Search for users in app.
@@ -181,16 +196,54 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
     * (Read/GET) Query all posts from users user follows.
 * Vote Menu Screen
     * (Create/POST) Create a poll object.
+     ```swift
+         @IBOutlet weak var createPoll: UIButton!
+         @IBAction func createPollTapped(_ sender: Any) {
+         //TODO: transition to new Poll Screen 
+         }
+      ```
     * (Delete) Delete existing or past polls.
     * (Read/GET) Display feed of past polls and results.
 * Start A Poll Screen
-    * (Read/GET) Display poll information like time remaining, number voted, options.
+    * (Read/GET) Display poll information like time remaining, number voted, options. 
+           ```swift
+              //let displayPoll =  TODO: array / data containing poll data         
+              pollTime?.text = "\(displayPoll.timeRemaining)"
+              pollCount?.text = " \(displayPoll.votersCount)" 
+              ```
     * (Read/GET) Display messages/updates in between options and votes.
     * (Create/POST) User creates a vote on a restaurant option.
+    ```swift
+                 if userLiked == nil  {
+                        likesCount += 1
+                        usersLikedIdsArray[uid] = true
+                        //self.update ...update array holding count
+                    } else {
+                        likesCount -= 1
+                         //self.update ...update array holding count
+                    }
+       ```
     * (Update/PUT) User adds a restaurant option to poll object.
     * (Delete) User removes vote from restaurant option.
 * Results Screen 
     * (Read/GET) Display poll data with number of votes per restaurant option.
+     ```swift
+     //import Charts - to display graphical data
+     func setChart(dataPoints: [String], values: [Double]) {
+            barChartView.noDataText = "You need to provide data for the chart."        
+            }
+            //restaurants = array holding restaurants users voted on
+            //votes = dictionary holding votes per restaurant
+            setChart(restaurants, values: votes)
+             var dataEntries: [PollChartEntryData] = []
+             for i in 0..<dataPoints.count {
+                  let dataEntry = PollChartEntryData(value: values[i], xIndex: i)
+                  dataEntries.append(dataEntry)
+                     }
+             let chartDataSet = PollChartEntryData(yVals: dataEntries, label: "Number of Votes")
+             let chartData = RestaurantChartData(xVals: restaurant, dataSet: chartDataSet)
+             barChartView.data = chartData
+              ```    
     * (Read/GET) Query a GPS map to display location of winning restaurant.
 * Search Screen
     * (Read/GET) Display images of restaurants from search results. 
