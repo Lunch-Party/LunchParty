@@ -161,9 +161,8 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
    * Login Button
    * Register Button
 * Home Feed Screen
-   * Search Button
-   * Following Menu Button
-   * Vote Menu Button
+   * (Read/GET) Search for users in app.
+   * (Read/GET) Display users posts by most recent.
 * Following Feed Screen
     * (Read/GET) Query all posts from users user follows.
 * Vote Menu Screen
@@ -174,15 +173,16 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
     * (Read/GET) Display poll information like time remaining, number voted, options.
     * (Read/GET) Display messages/updates in between options and votes.
     * (Create/POST) User creates a vote on a restaurant option.
+    * (Delete) User removes vote from restaurant option.
 * Results Screen 
     * (Read/GET) Display poll data with number of votes per restaurant option.
     * (Read/GET) Query a GPS map to display location of winning restaurant.
 * Search Screen
-    * User can see Images of search results
-    * Description and Reviews can be picked
-    * Filters screen is overlayed over the Search screen
-        * This allows the user to set a filter of what they are searching for
+    * (Read/GET) Display images of restaurants from search results. 
+    * (Read/GET) User can filter search results and change search result display.
 * User Profile Screen
+    * (Update/PUT) Change user's profile image.
+    * (Update/PUT) Change user's name.
 
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
