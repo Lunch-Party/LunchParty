@@ -206,14 +206,14 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
     * (Read/GET) Display feed of past polls and results.
 * Start A Poll Screen
     * (Read/GET) Display poll information like time remaining, number voted, options. 
-           ```swift
+         ```swift
               //let displayPoll =  TODO: array / data containing poll data         
               pollTime?.text = "\(displayPoll.timeRemaining)"
               pollCount?.text = " \(displayPoll.votersCount)" 
-              ```
+          ```
     * (Read/GET) Display messages/updates in between options and votes.
     * (Create/POST) User creates a vote on a restaurant option.
-    ```swift
+      ```swift
                  if userLiked == nil  {
                         likesCount += 1
                         usersLikedIdsArray[uid] = true
@@ -227,8 +227,8 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
     * (Delete) User removes vote from restaurant option.
 * Results Screen 
     * (Read/GET) Display poll data with number of votes per restaurant option.
-     ```swift
-     //import Charts - to display graphical data
+    ```swift
+      //import Charts - to display graphical data
      func setChart(dataPoints: [String], values: [Double]) {
             barChartView.noDataText = "You need to provide data for the chart."        
             }
@@ -243,7 +243,7 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
              let chartDataSet = PollChartEntryData(yVals: dataEntries, label: "Number of Votes")
              let chartData = RestaurantChartData(xVals: restaurant, dataSet: chartDataSet)
              barChartView.data = chartData
-              ```    
+     ```    
     * (Read/GET) Query a GPS map to display location of winning restaurant.
 * Search Screen
     * (Read/GET) Display images of restaurants from search results. 
