@@ -159,7 +159,7 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
 ### Networking
 * Launch Login Screen
    * (Read/GET) Query logged in user object.
-        ```swift
+        ```swift 
         let email = email_login.text!
         let password = pass_login.text!
         // Signing in the user
@@ -175,8 +175,30 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
                 //TODO: transition to home / main screen if successfully logged in
             }```
    * (Create/POST) Create user object.
+      ```swift
+         PFUser.becomeInBackground("session-token-here", {
+               (user: PFUser?, error: NSError?) -> Void in
+                if error != nil {
+                 // The token could not be validated.
+                } else {
+                // The current user is now set to user.
+                }
+            })
+      ```
 * Home Feed Screen
    * (Read/GET) Search for users in app.
+    ```swift
+      let query = PFQuery(className: "Author")
+      query.whereKey("name", equalTo: authorname)
+      query.findObjectsInBackground { (authorname: [PFObject]?, error: Error?) in
+            if let error = error {
+            // The request failed
+                  print(error.localizedDescription)
+            } else {
+                  // users that match should appear 
+            }
+        }
+   ```
    * (Read/GET) Display users posts by most recent.
        ```swift
        let query = PFQuery(className:"Post")
@@ -194,6 +216,18 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
    * (Delete) Delete a post object.
 * Following Feed Screen
     * (Read/GET) Query all posts from users user follows.
+     ```swift
+      let query = PFQuery(className: "Author")
+      query.whereKey("post", equalTo: authorfollowsusers)
+      query.findObjectsInBackground { (authorposts: [PFObject]?, error: Error?) in
+            if let error = error {
+            // The request failed
+                  print(error.localizedDescription)
+            } else {
+                  // users that match should appear 
+            }
+        }
+   ```
 * Vote Menu Screen
     * (Create/POST) Create a poll object.
      ```swift
@@ -244,14 +278,55 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
              let chartData = RestaurantChartData(xVals: restaurant, dataSet: chartDataSet)
              barChartView.data = chartData
      ```    
-    * (Read/GET) Query a GPS map to display location of winning restaurant.
+    * (Create/POST) Query a GPS map to display location of winning restaurant.
+    ```swift
+    PFGeoPoint.geoPointForCurrentLocationInBackground {
+      (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
+        if error == nil {
+         // display restaurant location with geopoint
+            }
+         }
+    ```    
 * Search Screen
     * (Read/GET) Display images of restaurants from search results. 
     * (Read/GET) User can filter search results and change search result display.
 * User Profile Screen
     * (Read/GET) Query logged in user object.
+      ```swift
+       let query = PFQuery(className:"AuthorObject")
+       query.getObjectInBackground(withId: "xWMyZEGZ") { (Object: PFObject?, error: Error?) in
+       if let error = error {
+        print(error.localizedDescription)
+        } else {
+        // Do something
+         }
+          }
+      ```    
     * (Update/PUT) Change user's profile image.
+     ```swift
+    let query = PFQuery(className:"Author")
+    query.getObjectInBackground(withId: "xWMyZEGZ") { (Profile: PFObject?, error: Error?) in
+    if let error = error {
+        print(error.localizedDescription)
+    } else if let Profile = Profile{
+        Profile["ImageLink"] = //New image link
+         Profile.saveInBackground()
+     }
+    }
+   ```    
     * (Update/PUT) Change user's name.
+    ```swift
+    let query = PFQuery(className:"Author")
+    query.getObjectInBackground(withId: "xWMyZEGZ") { (Profile: PFObject?, error: Error?) in
+    if let error = error {
+        print(error.localizedDescription)
+    } else if let Profile = Profile{
+        Profile["Name"] = //New profile name
+         Profile.saveInBackground()
+     }
+    }
+   ```    
+    
 
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
