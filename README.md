@@ -157,6 +157,32 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
    | updatedAt     | DateTime | date when post is last updated (default field) |
 
 ### Networking
-- [Add list of network requests by screen ]
+* Launch Login Screen
+   * Login Button
+   * Register Button
+* Home Feed Screen
+   * Search Button
+   * Following Menu Button
+   * Vote Menu Button
+* Following Feed Screen
+    * (Read/GET) Query all posts from users user follows.
+* Vote Menu Screen
+    * (Create/POST) Create a poll.
+    * (Delete) Delete existing or past polls.
+    * (Read/GET) Display feed of past polls and results.
+* Start A Poll Screen
+    * (Read/GET) Display poll information like time remaining, number voted, options.
+    * (Read/GET) Display messages/updates in between options and votes.
+    * (Create/POST) User creates a vote on a restaurant option.
+* Results Screen 
+    * (Read/GET) Display poll data with number of votes per restaurant option.
+    * (Read/GET) Query a GPS map to display location of winning restaurant.
+* Search Screen
+    * User can see Images of search results
+    * Description and Reviews can be picked
+    * Filters screen is overlayed over the Search screen
+        * This allows the user to set a filter of what they are searching for
+* User Profile Screen
+
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
