@@ -121,8 +121,9 @@ Lunch Party is a stripped down Yelp app with voting as its main user interaction
     * Highlights user submitted images 
 
 ## Wireframes
-We decided to put our focus on a digital wireframe since we would all be able to work on it and add our input. The link for this can be found under "Digital Wireframes & Mockups" and "Interactive Prototype" shows it in action as a GIF!. 
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+We decided to put our focus on a digital wireframe since we would all be able to work on it and add our input. The link for this can be found under "Digital Wireframes & Mockups" and "Interactive Prototype" shows it in action as a GIF!
+
+<img src="http://g.recordit.co/IK0yWmi6Y7.gif" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 https://www.figma.com/file/UtHHkhvTuEr4tc50VPssR8/Frame-I?node-id=0%3A1
