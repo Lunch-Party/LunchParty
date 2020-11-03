@@ -163,6 +163,18 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
 * Home Feed Screen
    * (Read/GET) Search for users in app.
    * (Read/GET) Display users posts by most recent.
+       ```swift
+       let query = PFQuery(className:"Post")
+       query.whereKey("author", equalTo: currentUser)
+       query.order(byDescending: "createdAt")
+       query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+       if let error = error {
+       print(error.localizedDescription)
+       } else if let posts = posts {
+      print("Successfully retrieved \(posts.count) posts.")
+      // TODO: Do something with posts...
+       }
+     }```
    * (Create/POST) Create a post object.
    * (Delete) Delete a post object.
 * Following Feed Screen
