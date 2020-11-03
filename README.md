@@ -289,7 +289,31 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
     ```    
 * Search Screen
     * (Read/GET) Display images of restaurants from search results. 
+       ```swift
+         let query = PFQuery(className:"Restaurant")
+         query.getObjectInBackground(withId: "xWMyZEGZ") { (Restaurantimages: PFObject?, error: Error?) in
+         if let error = error {
+               print(error.localizedDescription)
+         } else {
+             Restimages["ImageLink"] = //restaurant images
+            //loop through restaurants and display restaurant images 
+        }
+       }
+      ```    
+   
     * (Read/GET) User can filter search results and change search result display.
+     ```swift
+      let query = PFQuery(className: "Object")
+      query.whereKey("searchobject", equalTo: objects)
+      query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+            // The request failed
+                  print(error.localizedDescription)
+            } else {
+                  // display results
+            }
+        }
+   ```
 * User Profile Screen
     * (Read/GET) Query logged in user object.
       ```swift
@@ -309,7 +333,7 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
     if let error = error {
         print(error.localizedDescription)
     } else if let Profile = Profile{
-        Profile["ImageLink"] = //New image link
+         Profile["ImageLink"] = //New image link
          Profile.saveInBackground()
      }
     }
