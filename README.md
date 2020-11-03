@@ -132,16 +132,15 @@ https://www.figma.com/file/UtHHkhvTuEr4tc50VPssR8/Frame-I?node-id=0%3A1
 http://g.recordit.co/IK0yWmi6Y7.gif
 https://recordit.co/IK0yWmi6Y7 *additional search capability
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
 #### Poll
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | objectId      | String   | unique id for the user post (default field) |
+   | option     | String   | name of one restaurant option |
    | author        | Pointer to User| image author |
    | image         | File     | image that user posts |
-   | likesCount    | Number   | number of votes for the post |
+   | likesCount    | Number   | number of votes for the restaurant option |
    | createdAt     | DateTime | date when post is created (default field) |
 
 ### Networking
