@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,13 +12,12 @@
 		664BF741861AEF03C792002F /* Pods_LunchParty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAD993EAB864EAF44AFB9D4 /* Pods_LunchParty.framework */; };
 		A1A612D9255A06F700BD730E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A612D8255A06F700BD730E /* AppDelegate.swift */; };
 		A1A612DB255A06F700BD730E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A612DA255A06F700BD730E /* SceneDelegate.swift */; };
-		A1A612DD255A06F700BD730E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A612DC255A06F700BD730E /* ViewController.swift */; };
 		A1A612E0255A06F700BD730E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A612DE255A06F700BD730E /* Main.storyboard */; };
 		A1A612E2255A06FA00BD730E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A612E1255A06FA00BD730E /* Assets.xcassets */; };
 		A1A612E5255A06FA00BD730E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A612E3255A06FA00BD730E /* LaunchScreen.storyboard */; };
 		A1A612F0255A06FA00BD730E /* LunchPartyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A612EF255A06FA00BD730E /* LunchPartyTests.swift */; };
 		A1A612FB255A06FA00BD730E /* LunchPartyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A612FA255A06FA00BD730E /* LunchPartyUITests.swift */; };
-		A1A6130C255A075300BD730E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6130B255A075300BD730E /* LoginViewController.swift */; };
+		A1A61332255A236A00BD730E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A61331255A236A00BD730E /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +45,6 @@
 		A1A612D5255A06F700BD730E /* LunchParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A612D8255A06F700BD730E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1A612DA255A06F700BD730E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A1A612DC255A06F700BD730E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A1A612DF255A06F700BD730E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1A612E1255A06FA00BD730E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1A612E4255A06FA00BD730E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +55,7 @@
 		A1A612F6255A06FA00BD730E /* LunchPartyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LunchPartyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A612FA255A06FA00BD730E /* LunchPartyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchPartyUITests.swift; sourceTree = "<group>"; };
 		A1A612FC255A06FA00BD730E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1A6130B255A075300BD730E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A1A61331255A236A00BD730E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		B93CE02AD7977E1AE0EB0DC9 /* Pods-LunchParty-LunchPartyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchParty-LunchPartyUITests.debug.xcconfig"; path = "Target Support Files/Pods-LunchParty-LunchPartyUITests/Pods-LunchParty-LunchPartyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE58282A6DB12F662AF4627D /* Pods-LunchPartyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchPartyTests.debug.xcconfig"; path = "Target Support Files/Pods-LunchPartyTests/Pods-LunchPartyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5BDEF4D2537323FC457D730 /* Pods_LunchParty_LunchPartyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunchParty_LunchPartyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +101,6 @@
 				BE58282A6DB12F662AF4627D /* Pods-LunchPartyTests.debug.xcconfig */,
 				3709D12060F36324627C9488 /* Pods-LunchPartyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,10 +141,9 @@
 			children = (
 				A1A612D8255A06F700BD730E /* AppDelegate.swift */,
 				A1A612DA255A06F700BD730E /* SceneDelegate.swift */,
-				A1A612DC255A06F700BD730E /* ViewController.swift */,
 				A1A612DE255A06F700BD730E /* Main.storyboard */,
-				A1A6130B255A075300BD730E /* LoginViewController.swift */,
 				A1A612E1255A06FA00BD730E /* Assets.xcassets */,
+				A1A61331255A236A00BD730E /* LoginViewController.swift */,
 				A1A612E3255A06FA00BD730E /* LaunchScreen.storyboard */,
 				A1A612E6255A06FA00BD730E /* Info.plist */,
 			);
@@ -410,8 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1A6130C255A075300BD730E /* LoginViewController.swift in Sources */,
-				A1A612DD255A06F700BD730E /* ViewController.swift in Sources */,
+				A1A61332255A236A00BD730E /* LoginViewController.swift in Sources */,
 				A1A612D9255A06F700BD730E /* AppDelegate.swift in Sources */,
 				A1A612DB255A06F700BD730E /* SceneDelegate.swift in Sources */,
 			);
