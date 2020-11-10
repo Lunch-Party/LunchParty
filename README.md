@@ -356,7 +356,7 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
 ## Unit 10 - Week 1 Progress
-http://g.recordit.co/eSyjqE3FnT.gif
+<img src="http://g.recordit.co/eSyjqE3FnT.gif">
 
 #### User Story Completions
 - [x] Create Launch Login screen
