@@ -354,3 +354,6 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
 
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+## Unit 10 - Week 1 Progress
+http://g.recordit.co/eSyjqE3FnT.gif
