@@ -357,3 +357,8 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
 
 ## Unit 10 - Week 1 Progress
 http://g.recordit.co/eSyjqE3FnT.gif
+
+#### User Story Completions
+- [x] Create Launch Login screen
+- [x] Start having general layout made out with Main Storyboard
+
