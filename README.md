@@ -362,3 +362,6 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
 - [x] Create Launch Login screen
 - [x] Start having general layout made out with Main Storyboard
 
+## Unit 11 - Week 2 Progress
+<img src="http://g.recordit.co/cc2RD5SUx5.gif">
+
