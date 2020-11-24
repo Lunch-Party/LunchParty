@@ -365,3 +365,5 @@ https://recordit.co/IK0yWmi6Y7 *additional search capability
 ## Unit 11 - Week 2 Progress
 <img src="http://g.recordit.co/cc2RD5SUx5.gif">
 
+## Unit 12 - Week 3 Progress
+<img src="http://g.recordit.co/xMvXDOuf9N.gif">
